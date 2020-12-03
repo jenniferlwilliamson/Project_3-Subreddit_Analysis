@@ -257,9 +257,9 @@ I downloaded up to 100 posts per day for the last 4 years for 4 additional subre
 
 * The model results are reasonable (a key feature for categorizing a post as republican was 'Kasich', which was one of the top unique words when looking at top 1000 words in each subreddit)
 
-![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_rep_1000.png)
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_rep_1000_kasich.png)
 
-![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3b_features.png)
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3b_features_kasich.png)
 
 
 ### Next Steps
