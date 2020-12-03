@@ -23,15 +23,15 @@
 
 * data - folder includes data used for the analysis
    * 14 files downloaded using the pushshift API for reddit (not included due to size of some files)
-    - downloaded in multiple chunks due to computer timing out
-    - see notebook 3a
+     - downloaded in multiple chunks due to computer timing out
+     - see notebook 3a
    * [reps_and_dems.csv](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Data/reps_and_dems.csv)         
-    - combines the all of the reps and dems files downloaded from pushshift
-    - cleaned up so only potential columns of interest are included
-    - see notebook 3b
+     - combines the all of the reps and dems files downloaded from pushshift
+     - cleaned up so only potential columns of interest are included
+     - see notebook 3b
    * [politics.csv](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Data/politics.csv)
-    - downloaded data using the PRAW api for reddit
-    - see notebook 1
+     - downloaded data using the PRAW api for reddit
+     - see notebook 1
   
 * visuals:
    * screenshots used for README file
@@ -40,8 +40,8 @@
    * [Appendix_1_supplemental_subreddits](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/For_Future_Research--Code_and_Data/Appendix_1-Supplemental_subreddits.ipynb) - Downloaded data from additional 4 reddits using pushshift API
    * [Appendix_2_EDA_on_supplementalsubreddits](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/For_Future_Research--Code_and_Data/Appendix_2_EDA_on_supplemental_subreddits.ipynb) - Cleaned data from additional 4 reddits using pushshift API
    * 4 csv files of cleaned data are not included due to file size
-    - Cleaned data from additional 4 reddits using pushshift API 
-    - (note that the original files downloaded from online are too big to upload)
+     - Cleaned data from additional 4 reddits using pushshift API 
+     - (note that the original files downloaded from online are too big to upload)
     
     
 ---
@@ -86,6 +86,7 @@ Key Data analyzed:
 ---
 
 **Initial Download Data and basic EDA using the PRAW API**
+
 **Notebooks 1 and 2**
     
 I initially downloaded using the PRAW API (see notebook 1). I took the top 1000, newest 1000, most controversial 1000, and hottest 1000 posts from each subreddit.  I initially filtered the data I was looking at so that I only focused on items that appeared in most submissions - which were **title** and **url**.  When I began reviewing the data, I found that the urls were really interesting, however, even though I had almost 8000 posts, I had much fewer urls.
@@ -95,6 +96,7 @@ I found 402 urls referenced in the democrat subreddit and 558 urls referenced in
 In reviewing the PRAW documentation, I did not see a clear way to download more that the top 1000 of any given post, so I switched API's that I was using to download data.  
     
 **Second Download Data and basic EDA using the pushshift API**
+
 **Notebooks 3a and 3b**
     
 I then downloaded up to 100 posts per day (the max allowed), and collected data for the last 8 years in each subreddit using the pushshift api. Because the computer sometimes timed out due to inactivity, I ended up having to collect the data in chunks. However, because I had a counter on the days (which I created after the first set of errors appeared), it was easy to restart where I left off with some overlap. 
@@ -102,6 +104,7 @@ I then downloaded up to 100 posts per day (the max allowed), and collected data 
 I used the timestamps to help when combining the dataframes to account for the overlapping information in each field (I used the timestamp of the last entry for each file and found where that appeared in the subsequent file).  After combining the entire republican and entire democrat data and removing duplicates, I then selected key features that I found were similar in both, filtered both republican and democrat datasets so that I only had the key features in the two dataframes, and combined the dataframes into one file for easy analysis.    
 
 **EDA on the large combined dataframe (downloaded using pushshift API)**
+
 **Notebook 4**
 
 I preprocessed the data (adding title length and word count to the dataframe), then divided my EDA into three main groups - 
@@ -112,13 +115,14 @@ I preprocessed the data (adding title length and word count to the dataframe), t
   * I looked at the distribution of word count and length of the titles for the submissions
 * **Analyze the words in the title**
   * I looked at the words in the title in three different ways
-  * **Common Words**- using count vectorizer, I compared the top 25 words for each subreddit with and without stop words, and for 1-,2-,and 3-ngram word combinations.  I took the top 900 word for each subreddit, then graphed the top 25 for each one, and how it's value compared to the other subreddit.  I also normalized the appearance numbers since my data was imbalanced (democrats-123668, Republican-90351)
+  * **Common Words**- using count vectorizer, I compared the top 25 words for each subreddit with and without stop words, and for 1-,2-,and 3-ngram word combinations.  I took the top 900 word for each subreddit, then graphed the top 25 for each one, and how its value compared to the other subreddit.  I also normalized the appearance numbers since my data was imbalanced (democrats-123668, Republican-90351)
   * **Unique Words** - I looked at the top 1000 and top 5000 words in each subreddit. For each scenario I found the words that appeared the most in one subreddit while not appearing in the other.  I eliminated stop words for this analysis, I also looked at this for 1-,2-, and 3-ngram words.
   * **Sentiment Analysis** - I performed sentiment analysis on each subreddit and found a lot of sarcasm just in the first few posts of both subreddits (which sentiment analysis doesn't analyze well).  Both subreddits also had similar distributions, so I performed limited sentiment analysis.
   
 The results of this analyses affected how I analyzed URLs, title characteristics, and title words in the modeling phase.  I did vectorization, but I did not do sentiment analysis.  See Notebook 5 for modeling.   
     
 **Modeling on the large combined dataframe (downloaded using pushshift API)**
+
 **Notebook 5**
 
 I did modeling on the data downloaded from pushshift API. This was divided into the following parts:
@@ -159,29 +163,33 @@ I downloaded up to 100 posts per day for the last 4 years for 4 additional subre
  * **Title Words**
  
   * **Common Words**
-  * Democrats and Republicans have a lot of overlap in their top words
+     - Democrats and Republicans have a lot of overlap in their top words
+
+     - Common words for 3-word n-grams (looking at the top 900 words in each subreddit)
+    ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3word_ngram_rep.png)      
+    ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3word_ngram_dem.png)  
   
-  * Common words for 3-word n-grams (looking at the top 900 words in each subreddit)
-    ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3word_ngram_rep.png)      ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3word_ngram_dem.png)  
+     - Common words for 1-word n-grams (looking at the top 900 words in each subreddit)
   
-  * Common words for 1-word n-grams (looking at the top 900 words in each subreddit)
-  
-    ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_ngram_rep.png)      ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_ngram_dem.png)  
+    ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_ngram_rep.png)      
+    ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_ngram_dem.png)  
   
   * **Unique Words**
-  * The words get more interesting when looking at the unique out of top 5000 words vs top 1000 words
-  * when looking at the unique words out of the top 5000 words, the words tend to be very specific to platforms/values of a given party
+     - The words get more interesting when looking at the unique out of top 5000 words vs top 1000 words
+     - When looking at the unique words out of the top 5000 words, the words tend to be very specific to platforms/values of a given party
   
-  * Unique words out of the top 5000 words in each subreddit (looking at 1-word n-grams)
-      ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_rep_5000.png)      ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_dem_5000.png)  
+     - Unique words out of the top 5000 words in each subreddit (looking at 1-word n-grams)
+    ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_rep_5000.png)      
+    ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_dem_5000.png)  
   
-  * Unique words out of the top 1000 words in each subreddit(looking at 1-word n-grams)
+     - Unique words out of the top 1000 words in each subreddit(looking at 1-word n-grams)
  
-     ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_rep_1000.png)      ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_dem_1000.png)  
+    ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_rep_1000.png)      
+    ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_dem_1000.png)  
  
  * **Sentiment Analysis**
- * I looked at the top five results for positive, negative, and compound sentiments for both the republican and democrat subreddits
- * There is a lot of sarcasm and harsh language in just the top five results, so please refer to Notebook 4 (a link to the sentiment analysis section is in the top of the notebook) if you're interested in looking at the results for this.
+     - I looked at the top five results for positive, negative, and compound sentiments for both the republican and democrat subreddits
+     - There is a lot of sarcasm and harsh language in just the top five results, so please refer to Notebook 4 (a link to the sentiment analysis section is in the top of the notebook) if you're interested in looking at the results for this.
  
  
  * **URLs**
@@ -204,7 +212,7 @@ I downloaded up to 100 posts per day for the last 4 years for 4 additional subre
  * Summary table of best results for each model group (see Notebook 5 for summary tables of all models run) 
 
 | Model Group | Model | Dataset | Vectorizer| Model| Cross-Val Acc.| Train Acc.| Test Acc.| Spec.| Sens.| Notes |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |--- |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |--- |
 | **Model Group 1**| Model 1b |Title Words|CV|Log|0.690|0.714|0.695|0.753|0.617|Best of Group 1|
 | **Model Group 2**| Model 2e |URL|TV|Log|0.776|0.797|0.780|0.903|0.611|Best of Group 2|
 | **Model Group 3**| Model 3b |Title Words/URL/Title Chars|CV-words, TV-URL|Log|n/a|0.800|0.78|0.704|0.843|Best of Group 3|
@@ -215,29 +223,25 @@ I downloaded up to 100 posts per day for the last 4 years for 4 additional subre
 
  * Model 3b (analysis using Title Words, URL, and Title Characteristics)
 
-![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3b_conf_mat.png)
-
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3b_conf_mat.png)  
 ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3b_features.png)
 
 
  * Model 1b (analysis using Title Words)
 
-![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1b_Conf_Matr.png)
-
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1b_Conf_Matr.png)   
 ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1b_features.png)
 
 
  * Model 2e (analysis using URL)
 
-![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/2e_conf_matr.png)
-
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/2e_conf_matr.png)  
 ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/2e_features.png)
 
 
  * Model 4b (analysis using Title Characteristics)
 
-![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/4b_conf_mat.png)
-
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/4b_conf_mat.png)  
 ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/4b_features.png)
 
 ---
@@ -255,7 +259,7 @@ I downloaded up to 100 posts per day for the last 4 years for 4 additional subre
 
 ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_rep_1000.png)
 
-![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3b_features.png
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3b_features.png)
 
 
 ### Next Steps
