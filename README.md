@@ -1,7 +1,3 @@
-<div style="background-color:dodgerblue;color:white;padding:20px;font-size:16px;font-family:'Arial'">
-  <h1>Republican or Democrat </h1>
-</div>
-
 ---
 # File Structure
 
@@ -9,45 +5,31 @@
 
 ### Files:
 * README.md - describes file
-* [Presentation.pptx](https://git.generalassemb.ly/jenni5/project_3/blob/master/Project_3_presentation.pptx)
+* [Presentation.pptx](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Project_3_presentation.pptx)
     - presentation in powerpoint 
     - preferred viewing method
-* [Presentation.pdf](https://git.generalassemb.ly/jenni5/project_3/blob/master/Project_3_presentation.pdf) 
+* [Presentation.pdf](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Project_3_presentation.pdf) 
     - presentation in pdf form (alternate if powerpoint not an option)   
 
 ### Folders:
     
 * code - folder includes files for running the analysis
-   * [1_Download_Data_PRAW](https://git.generalassemb.ly/jenni5/project_3/blob/master/Code/1_Download_Data_PRAW.ipynb) - import data using PRAW
-   * [2_EDA_on_Praw](https://git.generalassemb.ly/jenni5/project_3/blob/master/Code/2_EDA_on_Praw.ipynb) - import/clean test data
-   * [3a_Download_Data_Pushshift](https://git.generalassemb.ly/jenni5/project_3/blob/master/Code/3a_Download_Data_Pushshift.ipynb) - EDA on training data
-   * [3b_Combine_subreddits_into_one_DF](https://git.generalassemb.ly/jenni5/project_3/blob/master/Code/3b_Combine_subreddits_into_one_DF.ipynb) - based on 2a, prediction 1 
-   * [4_EDA_on_Pushshift](https://git.generalassemb.ly/jenni5/project_3/blob/master/Code/4_EDA_on_Pushshift.ipynb) - analyze categorical features
-   * [5_Processing_and_Modelling](https://git.generalassemb.ly/jenni5/project_3/blob/master/Code/5_Processing_and_Modeling.ipynb) - based on 3a, prediction 2 
+   * [1_Download_Data_PRAW](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Code/1_Download_Data_PRAW.ipynb) - import data using PRAW
+   * [2_EDA_on_Praw](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Code/2_EDA_on_Praw.ipynb) - import/clean test data
+   * [3a_Download_Data_Pushshift](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/ode/3a_Download_Data_Pushshift.ipynb) - EDA on training data
+   * [3b_Combine_subreddits_into_one_DF](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Code/3b_Combine_subreddits_into_one_DF.ipynb) - based on 2a, prediction 1 
+   * [4_EDA_on_Pushshift](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Code/4_EDA_on_Pushshift.ipynb) - analyze categorical features
+   * [5_Processing_and_Modelling](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Code/5_Processing_and_Modeling.ipynb) - based on 3a, prediction 2 
 
 * data - folder includes data used for the analysis
-   * [reps.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/reps.csv),
-    [reps2.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/reps2.csv),
-    [reps3.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/reps3.csv),
-    [reps4.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/reps4.csv),
-    [reps5.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/reps5.csv),
-    [reps6.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/reps6.csv),
-    [reps7.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/reps7.csv)   
-   * [dems.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/dems.csv),
-    [dems2.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/dems2.csv),
-    [dems3.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/dems3.csv),
-    [dems4.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/dems4.csv),
-    [dems5.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/dems5.csv),
-    [dems6.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/dems6.csv),
-    [dems7.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/dems7.csv)
-    - downloaded using the pushshift API for reddit
+   * 14 files downloaded using the pushshift API for reddit (not included due to size of some files)
     - downloaded in multiple chunks due to computer timing out
     - see notebook 3a
-   * [reps_and_dems.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/reps_and_dems.csv)         
+   * [reps_and_dems.csv](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Data/reps_and_dems.csv)         
     - combines the all of the reps and dems files downloaded from pushshift
     - cleaned up so only potential columns of interest are included
     - see notebook 3b
-   * [politics.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/Data/politics.csv)
+   * [politics.csv](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Data/politics.csv)
     - downloaded data using the PRAW api for reddit
     - see notebook 1
   
@@ -55,12 +37,9 @@
    * screenshots used for README file
     
 * for future research - Code and Data:
-   * [Appendix_1_supplemental_subreddits](https://git.generalassemb.ly/jenni5/project_3/blob/master/For_Future_Research--Code_and_Data/Appendix_1-Supplemental_subreddits.ipynb) - Downloaded data from additional 4 reddits using pushshift API
-   * [Appendix_2_EDA_on_supplementalsubreddits](https://git.generalassemb.ly/jenni5/project_3/blob/master/For_Future_Research--Code_and_Data/Appendix_2_EDA_on_supplemental_subreddits.ipynb) - Cleaned data from additional 4 reddits using pushshift API
-   * [conservative_clean.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/For_Future_Research--Code_and_Data/conservative_clean.csv),
-    [liberal_clean.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/For_Future_Research--Code_and_Data/liberal_clean.csv),
-    [libertarian_clean.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/For_Future_Research--Code_and_Data/libertarian_clean.csv),
-    [progressive_clean.csv](https://git.generalassemb.ly/jenni5/project_3/blob/master/For_Future_Research--Code_and_Data/progressive_clean.csv)
+   * [Appendix_1_supplemental_subreddits](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/For_Future_Research--Code_and_Data/Appendix_1-Supplemental_subreddits.ipynb) - Downloaded data from additional 4 reddits using pushshift API
+   * [Appendix_2_EDA_on_supplementalsubreddits](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/For_Future_Research--Code_and_Data/Appendix_2_EDA_on_supplemental_subreddits.ipynb) - Cleaned data from additional 4 reddits using pushshift API
+   * 4 csv files of cleaned data are not included due to file size
     - Cleaned data from additional 4 reddits using pushshift API 
     - (note that the original files downloaded from online are too big to upload)
     
@@ -73,13 +52,13 @@ For this Project, I analyzed the r/Republican and r/democrats subreddits.
     
 The [r/Republican](https://www.reddit.com/r/Republican/) subreddit includes 154k members, and is the largest subreddit that notes it's a place for republicans.
     
-![](https://git.generalassemb.ly/jenni5/project_3/blob/master/visuals/Republican_Header.png)
-![](https://git.generalassemb.ly/jenni5/project_3/blob/master/visuals/Republican_About_Community.png)    
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/Republican_Header.png)
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/Republican_About_Community.png)    
     
 The [r/democrats](https://www.reddit.com/r/democrats/) subreddit includes 148k members, and is also the largest subreddit that notes it's a place for democrats.
 
-![](https://git.generalassemb.ly/jenni5/project_3/blob/master/visuals/democrats_Header.png)
-![](https://git.generalassemb.ly/jenni5/project_3/blob/master/visuals/Republican_About_Community.png)   
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/democrats_Header.png)
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/Republican_About_Community.png)   
 
 ---
 # Problem Statement
@@ -183,22 +162,22 @@ I downloaded up to 100 posts per day for the last 4 years for 4 additional subre
   * Democrats and Republicans have a lot of overlap in their top words
   
   * Common words for 3-word n-grams (looking at the top 900 words in each subreddit)
-    ![](rep)      ![](dem)  
+    ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3word_ngram_rep.png)      ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3word_ngram_dem.png)  
   
   * Common words for 1-word n-grams (looking at the top 900 words in each subreddit)
   
-    ![](rep)      ![](dem)  
+    ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_ngram_rep.png)      ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_ngram_dem.png)  
   
   * **Unique Words**
   * The words get more interesting when looking at the unique out of top 5000 words vs top 1000 words
   * when looking at the unique words out of the top 5000 words, the words tend to be very specific to platforms/values of a given party
   
   * Unique words out of the top 5000 words in each subreddit (looking at 1-word n-grams)
-      ![](rep)      ![](dem)  
+      ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_rep_5000.png)      ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_dem_5000.png)  
   
   * Unique words out of the top 1000 words in each subreddit(looking at 1-word n-grams)
  
-     ![](rep)      ![](dem)  
+     ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_rep_1000.png)      ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_dem_1000.png)  
  
  * **Sentiment Analysis**
  * I looked at the top five results for positive, negative, and compound sentiments for both the republican and democrat subreddits
@@ -208,17 +187,17 @@ I downloaded up to 100 posts per day for the last 4 years for 4 additional subre
  * **URLs**
  
    *  The news sources for democrats and republicans overlap, but have distinct tendencies 
- ![](democrat urls)
- ![](republican urls)
+ ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/Democrat_URLs_short.png)
+ ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/Republican_URLs_short.png)
  
  
  * **Title Characteristics**
  
    * Democrats have longer title lengths
-  ![](title lenths)  
+  ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/Title_length.png)  
    
    * Democrats have more words in their title
-  ![](title word count)  
+  ![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/Title_word_count.png)  
 
 ## Modeling Results
 
@@ -231,35 +210,35 @@ I downloaded up to 100 posts per day for the last 4 years for 4 additional subre
 | **Model Group 3**| Model 3b |Title Words/URL/Title Chars|CV-words, TV-URL|Log|n/a|0.800|0.78|0.704|0.843|Best of Group 3|
 | **Model Group 4**| Model 4b |Title Chars|n/a|Log|n/a|0.585|0.582|0.828|0.247|Best of Group 4|
 
-
+* Confusion matrix and key related features for each of the models
 **NOTE: In the confusion matrices below, 0 represents the democrat subreddit, and 1 represents the republican)**
 
- * Confusion matrix and key related features For Model 3b (analysis using Title Words, URL, and Title Characteristics)
+ * Model 3b (analysis using Title Words, URL, and Title Characteristics)
 
-![](https://git.generalassemb.ly/jenni5/project_3/blob/master/visuals/Confusion.png)
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3b_conf_mat.png)
 
-![](https://git.generalassemb.ly/jenni5/project_3/blob/master/visuals/Keyfeatures.png)
-
-
- * Confusion matrix and key related features For Model 1b (analysis using Title Words)
-
-![](https://git.generalassemb.ly/jenni5/project_3/blob/master/visuals/Confusion.png)
-
-![](https://git.generalassemb.ly/jenni5/project_3/blob/master/visuals/Keyfeatures.png)
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3b_features.png)
 
 
- * Confusion matrix and key related features For Model 2e (analysis using URL)
+ * Model 1b (analysis using Title Words)
 
-![](https://git.generalassemb.ly/jenni5/project_3/blob/master/visuals/Confusion.png)
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1b_Conf_Matr.png)
 
-![](https://git.generalassemb.ly/jenni5/project_3/blob/master/visuals/Keyfeatures.png)
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1b_features.png)
 
 
- * Confusion matrix and key related features For Model 4b (analysis using Title Characteristics)
+ * Model 2e (analysis using URL)
 
-![](https://git.generalassemb.ly/jenni5/project_3/blob/master/visuals/Confusion.png)
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/2e_conf_matr.png)
 
-![](https://git.generalassemb.ly/jenni5/project_3/blob/master/visuals/Keyfeatures.png)
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/2e_features.png)
+
+
+ * Model 4b (analysis using Title Characteristics)
+
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/4b_conf_mat.png)
+
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/4b_features.png)
 
 ---
 # Conclusions/Recommendations
@@ -274,14 +253,12 @@ I downloaded up to 100 posts per day for the last 4 years for 4 additional subre
 
 * The model results are reasonable (a key feature for categorizing a post as republican was 'Kasich', which was one of the top unique words when looking at top 1000 words in each subreddit)
 
-![](unique 1-word, 100 words)
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_rep_1000.png)
 
-![](key feature)
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3b_features.png
 
 
 ### Next Steps
 * Explore the relationships in the words more
 * What ranking of words count for each least are the features in each model
 * Explore similar subreddits – libertarian, conservative, progressive, liberal
-
-
