@@ -16,7 +16,7 @@
 * code - folder includes files for running the analysis
    * [1_Download_Data_PRAW](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Code/1_Download_Data_PRAW.ipynb) - import data using PRAW
    * [2_EDA_on_Praw](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Code/2_EDA_on_Praw.ipynb) - import/clean test data
-   * [3a_Download_Data_Pushshift](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/ode/3a_Download_Data_Pushshift.ipynb) - EDA on training data
+   * [3a_Download_Data_Pushshift](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Code/3a_Download_Data_Pushshift.ipynb) - EDA on training data
    * [3b_Combine_subreddits_into_one_DF](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Code/3b_Combine_subreddits_into_one_DF.ipynb) - based on 2a, prediction 1 
    * [4_EDA_on_Pushshift](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Code/4_EDA_on_Pushshift.ipynb) - analyze categorical features
    * [5_Processing_and_Modelling](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Code/5_Processing_and_Modeling.ipynb) - based on 3a, prediction 2 
@@ -211,12 +211,12 @@ I downloaded up to 100 posts per day for the last 4 years for 4 additional subre
 
  * Summary table of best results for each model group (see Notebook 5 for summary tables of all models run) 
 
-| Model Group | Model | Dataset | Vectorizer| Model| Cross-Val Acc.| Train Acc.| Test Acc.| Spec.| Sens.| Notes |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |--- |
-| **Model Group 1**| Model 1b |Title Words|CV|Log|0.690|0.714|0.695|0.753|0.617|Best of Group 1|
-| **Model Group 2**| Model 2e |URL|TV|Log|0.776|0.797|0.780|0.903|0.611|Best of Group 2|
-| **Model Group 3**| Model 3b |Title Words/URL/Title Chars|CV-words, TV-URL|Log|n/a|0.800|0.78|0.704|0.843|Best of Group 3|
-| **Model Group 4**| Model 4b |Title Chars|n/a|Log|n/a|0.585|0.582|0.828|0.247|Best of Group 4|
+| Model Group | Model | Dataset | Vectorizer| Model| Cross-Val Acc.| Train Acc.| Test Acc.| Spec.| Sens.|
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| **Model Group 1**| Model 1b |Title Words|CV|Log|0.690|0.714|0.695|0.753|0.617|
+| **Model Group 2**| Model 2e |URL|TV|Log|0.776|0.797|0.780|0.903|0.611|
+| **Model Group 3**| Model 3b |Title Words/URL/Title Chars|CV-words, TV-URL|Log|n/a|0.800|0.78|0.704|0.843|
+| **Model Group 4**| Model 4b |Title Chars|n/a|Log|n/a|0.585|0.582|0.828|0.247|
 
 * Confusion matrix and key related features for each of the models
 **NOTE: In the confusion matrices below, 0 represents the democrat subreddit, and 1 represents the republican)**
@@ -257,9 +257,9 @@ I downloaded up to 100 posts per day for the last 4 years for 4 additional subre
 
 * The model results are reasonable (a key feature for categorizing a post as republican was 'Kasich', which was one of the top unique words when looking at top 1000 words in each subreddit)
 
-![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_rep_1000\ copy.png)
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/1word_unique_rep_1000_kasich.png)
 
-![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3b_features\ copy.png)
+![](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/visuals/3b_features_kasich.png)
 
 
 ### Next Steps
