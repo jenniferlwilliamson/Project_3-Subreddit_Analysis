@@ -5,7 +5,7 @@
 
 ### Files:
 * README.md - describes file
-* [Presentation.pptx](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Project_3_presentation.pptx)
+* [Presentation.ppsx](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Project_3_presentation.ppsx)
     - presentation in powerpoint 
     - preferred viewing method
 * [Presentation.pdf](https://github.com/jenniferlwilliamson/Project_3-Subreddit_Analysis/blob/main/Project_3_presentation.pdf) 
